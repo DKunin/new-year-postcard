@@ -1,0 +1,262 @@
+@font-face {
+  font-family: 'Conv_11102';
+  src: url('fonts/11102.eot');
+  src: local('☺'), url('fonts/11102.woff') format('woff'), url('fonts/11102.ttf') format('truetype'), url('fonts/11102.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+html,
+body
+{
+    font-family: Conv_11102;
+    background: #2c3e50;
+}
+body
+{
+    display: flex;
+
+    justify-content: center;
+}
+
+:root
+{
+    --windows: #ffc929;
+    --party: 1;
+}
+
+#snow-top-layer
+{
+    transform: translateY(-500px);
+    animation: fall 12s infinite linear;
+
+    will-change: transform;
+}
+
+#snow-bottom-layer
+{
+    transform: translateY(-500px);
+    animation: fall 20s infinite linear;
+
+    will-change: transform;
+}
+
+@-webkit-keyframes fall
+{
+    100%
+    {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fall
+{
+    100%
+    {
+        transform: translateY(0);
+    }
+}
+
+#window01,
+#window0
+{
+    fill: #c2c2c2;
+}
+
+#window1,
+#window2
+{
+    opacity: var(--party);
+
+    fill: var(--windows);
+}
+
+.container
+{
+    -webkit-perspective: 2500px;
+            perspective: 2500px;
+}
+
+.card
+{
+    position: absolute;
+    left: 50%;
+
+    display: flex;
+    overflow: hidden;
+
+    width: 600px;
+    min-height: 480px;
+    margin: 3em auto;
+
+    cursor: pointer;
+    transition: transform .8s cubic-bezier(.63, -.32, .4, 1.39);
+    transform: translateX(-50%);
+
+    border-radius: .2em;
+    background: white;
+    box-shadow: 0 2.5em .9em -2em rgba(0, 0, 0, .4);
+
+    justify-content: center;
+    backface-visibility: hidden;
+}
+
+.card-flip
+{
+    transform: rotateY(180deg);
+}
+
+@-webkit-keyframes fade
+{
+    0%
+    {
+        opacity: 1;
+    }
+    50%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes fade
+{
+    0%
+    {
+        opacity: 1;
+    }
+    50%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+.happy-new-year
+{
+    font-size: 40px;
+    position: absolute;
+    bottom: 35px;
+    color: white;
+    text-shadow: 2px 1px #000;
+}
+
+.from-us
+{
+    font-size: 40px;
+
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+
+    color: white;
+    text-shadow: 2px 1px #000;
+}
+
+
+.postcard
+{
+    width: 100%;
+
+    background-image: url('./kunini.jpeg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card-front
+{
+    padding: 10px;
+}
+
+.card-back
+{
+    padding: 10px;
+}
+
+.animation
+{
+    display: flex;
+
+    width: 100%;
+
+    background-color: #0e173c;
+
+    justify-content: center;
+    align-items: center;
+}
+
+svg
+{
+    max-height: 450px;
+}
+
+#click-me
+{
+    position: absolute;
+    top: 1em;
+    left: 50%;
+
+    transform: translateX(-50%);
+    animation: fade 3s infinite ease-in-out;
+
+    color: #fff;
+}
+
+@-webkit-keyframes fade
+{
+    0%
+    {
+        opacity: 1;
+    }
+    50%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes fade
+{
+    0%
+    {
+        opacity: 1;
+    }
+    50%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+.player {
+  position: absolute;
+  opacity: 0;
+}
+
+.no-sound {
+  position: absolute;
+  right: 30px;
+  top: 0px;
+  fill: white;
+  width: 30px;
+  cursor: pointer;
+  display: none;
+  opacity: .4;
+}
+.no-sound.playing {
+  display: block;
+}
+
