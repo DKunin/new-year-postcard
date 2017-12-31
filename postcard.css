@@ -162,6 +162,7 @@ body
     background-image: url('./kunini.jpeg');
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: 50%;
 }
 
 .card-front
@@ -256,13 +257,12 @@ svg
 @media only screen and (max-device-width: 900px) {
     .container {
         position: fixed;
-        top: 11px;
+        top: 20px;
         left: 0;
         right: 0;
     }
     .card {
-        left: 41%;
-        width: 299px;
+        width: 85%;
         min-height: 240px;
     }
 }
