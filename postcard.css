@@ -13,12 +13,7 @@ body
     font-family: Conv_11102;
     background: #2c3e50;
 }
-body
-{
-    display: flex;
 
-    justify-content: center;
-}
 
 :root
 {
@@ -74,8 +69,7 @@ body
 
 .container
 {
-    -webkit-perspective: 2500px;
-            perspective: 2500px;
+    perspective: 2500px;
 }
 
 .card
@@ -153,11 +147,11 @@ body
     font-size: 40px;
 
     position: absolute;
-    right: 40px;
+    left: 40px;
     bottom: 0;
 
-    color: white;
-    text-shadow: 2px 1px #000;
+    color: #b93133;
+    text-shadow: 1px 1px #fff;
 }
 
 
@@ -258,5 +252,18 @@ svg
 }
 .no-sound.playing {
   display: block;
+}
+@media only screen and (max-device-width: 900px) {
+    .container {
+        position: fixed;
+        top: 11px;
+        left: 0;
+        right: 0;
+    }
+    .card {
+        left: 41%;
+        width: 299px;
+        min-height: 240px;
+    }
 }
 
