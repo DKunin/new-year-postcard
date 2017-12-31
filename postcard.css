@@ -160,7 +160,7 @@ body
 {
     width: 100%;
 
-    background-image: url('./kunini.jpeg');
+    background-image: url('./kunini.webp');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50%;
@@ -193,7 +193,7 @@ svg
     max-height: 450px;
 }
 
-#click-me
+.click-me
 {
     position: absolute;
     top: 1em;
@@ -252,6 +252,18 @@ svg
   display: none;
   opacity: .4;
 }
+
 .no-sound.playing {
   display: block;
+}
+
+.accredit {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    color: white;
+    opacity: 0.1;
+    font-family: Helvetica, Arial;
+    text-transform: lowercase;
+    text-decoration: none;
 }
